@@ -6,6 +6,7 @@ from django.db.models.signals import post_save
 # Create your models here.
 from django.contrib.auth.models import User
 
+
 class College(models.Model):
     name = models.CharField(max_length=100, unique=True)
     domain = models.CharField(max_length=100, unique=True)
@@ -14,9 +15,11 @@ class College(models.Model):
     state = models.CharField(max_length=100, unique=True)
     # currently country is India so we dont ask for now. In future may have to ask
 
+
 class StudyField(models.Model):
     name = models.CharField(max_length=100, unique=True)
     shortname = models.CharField(max_length=10, unique=True)
+
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
