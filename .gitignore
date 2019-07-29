@@ -1,1 +1,6 @@
 jist/
+
+#code editors
+.vscode/
+.idea/
+
